@@ -1,0 +1,97 @@
+.card {
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    padding: .375rem;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    transition: border 0.3s ease;
+}
+
+.imageWrapper {
+    position: relative;
+}
+
+.image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.addButton {
+    position: absolute;
+    bottom: 0.625rem;
+    right: 0.625rem;
+    width: 2.25rem;
+    height: 2.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    background-color: #000;
+    border: 1px solid #fff;
+    color: #fff;
+    transform: translateY(.625rem);
+    transition: all 0.3s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .card:hover {
+        border: 1px solid #000;
+    }
+
+    .card:hover .addButton {
+        opacity: 1;
+        transform: translateY(0);
+    }
+        .card:hover .addButton:hover {
+            background-color: #323232;
+        }
+}
+
+@media (hover: none),
+(pointer: coarse) {
+    .addButton {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.addButton:active {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.content {
+    padding: .625rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    background-color: var(--color-white);
+}
+
+.title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-black);
+    line-height: 1.2;
+    margin-top: auto;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.artist {
+    background-color: var(--color-black);
+    font-size: 0.875rem;
+    color: var(--color-white);
+    width: max-content;
+    padding: .1875rem .3125rem;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

@@ -1,0 +1,108 @@
+.musicPageContainer {
+    margin: 0 auto;
+    padding: 4.5rem 1rem 2.5rem 1rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: var(--color-black);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.searchForm {
+    display: flex;
+    align-items: center;
+    gap: .625rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.searchForm > :first-child {
+    flex: 1;
+}
+
+.buttons {
+    display: flex;
+    gap: .625rem;
+}
+
+.searchInfo {
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.noResults p {
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+}
+
+.errorMessage {
+    background-color: var(--color-white);
+    color: var(--color-red);
+    padding: .75rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.tracksGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(270px, 100%), 1fr));
+    gap: .625rem;
+    margin-bottom: 1rem;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.375rem;
+    padding-block: 1rem;
+}
+
+.paginationButton {
+    transition: opacity 0.3s ease;
+    min-width: 7.5rem;
+}
+
+.paginationButton:disabled {
+    background: var(--color-soft-grey);
+    color: var(--color-black);
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.pageInfo {
+    font-size: 1.1rem;
+    color: var(--color-black);
+    font-weight: 500;
+}
+
+@media (max-width: 47.9988rem) {
+    .title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .pagination {
+        flex-direction: column;
+        gap: .625rem;
+    }
+
+    .paginationButton {
+        width: 100%;
+        max-width: 12.5rem;
+    }
+}
+
+@media (max-width: 30em) {
+    .searchForm {
+        flex-direction: column;
+    }
+
+    .buttons,
+    .searchButton,
+    .clearButton {
+        width: 100%;
+    }
+}

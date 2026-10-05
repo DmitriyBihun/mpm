@@ -1,0 +1,200 @@
+.card {
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(0, 0, 0, .3);
+    transition: border .3s ease;
+}
+
+.card:hover {
+    border: 1px solid #000;
+}
+
+.cardHeader {
+    background-color: var(--color-black);
+    padding: 1rem;
+    margin-inline: -6px;
+    margin-top: -6px;
+    display: flex;
+    gap: .625rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: var(--color-white);
+}
+
+.playlistIcon {
+    background-color: var(--color-grey);
+    border: 1px solid var(--color-grey);
+    padding: .375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.deleteButton {
+    justify-self: flex-start;
+    padding: .375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .deleteButton:hover {
+    background-color: var(--color-black);
+    border: 1px solid var(--color-white);
+}
+
+.cardContent {
+    padding: 1rem;
+    flex: 1;
+}
+
+.playlistName {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-black);
+    margin-bottom: .75rem;
+    line-height: 1.2;
+}
+
+.playlistStats {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: var(--color-black);
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+
+    margin-bottom: .75rem;
+}
+
+.trackCount {
+    font-weight: 500;
+}
+
+.openButton {
+    margin: 0 auto 1rem auto;
+}
+
+.publicToggle {
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toggleLabel {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.toggleInput {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+.toggleSlider {
+    position: relative;
+    display: inline-block;
+    width: 2.5rem;
+    height: 1.25rem;
+    background-color: var(--color-grey);
+    transition: 0.3s ease;
+}
+
+.toggleSlider::before {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    left: 2px;
+    top: 2px;
+    background-color: var(--color-white);
+    transition: 0.3s ease;
+}
+
+.toggleInput:checked+.toggleSlider {
+    background-color: var(--color-black);
+}
+
+.toggleInput:checked+.toggleSlider::before {
+    transform: translateX(1.25rem);
+}
+
+.toggleText {
+    font-size: 0.85rem;
+    color: var(--color-grey);
+}
+
+.shareButton {
+    padding: .25rem .625rem;
+    background: none;
+    border: 1px solid var(--color-black);
+    color: var(--color-black);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.shareButton:hover {
+    background: var(--color-black);
+    color: var(--color-white);
+}
+
+.shareModalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--color-bg-overlay);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.shareModal {
+    background: var(--color-white);
+    padding: 1rem;
+    max-width: 28.125rem;
+    width: 90%;
+}
+
+.shareModalTitle {
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+    color: var(--color-black);
+}
+
+.shareModalText {
+    font-size: 0.9rem;
+    color: var(--color-grey);
+    margin-bottom: 1rem;
+}
+
+.shareUrlContainer {
+    display: flex;
+    gap: .5rem;
+    margin-bottom: 1rem;
+}
+
+.shareUrl {
+    flex: 1;
+}
+
+.closeShareButton {
+    width: 100%;
+}
+
+@media (max-width: 30em) {
+    .shareUrlContainer {
+        flex-direction: column;
+    }
+}

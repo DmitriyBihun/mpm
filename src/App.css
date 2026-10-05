@@ -1,0 +1,11 @@
+#root {
+  margin: 0 auto;
+}
+
+body {
+  min-height: 100vh;
+  color: #000;
+
+  overflow-x: hidden;
+  position: relative;
+}

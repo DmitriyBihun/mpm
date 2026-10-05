@@ -1,0 +1,51 @@
+.trackItem {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: .625rem;
+    padding: .375rem;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    transition: border 0.3s ease;
+}
+
+.coverBlock {
+    img {
+        width: 100%;
+        aspect-ratio: 1;
+        object-fit: cover;
+    }
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: .625rem;
+    justify-content: space-between;
+}
+
+.info {
+    margin-top: auto;
+}
+
+.title {
+    font-weight: 600;
+    margin-bottom: .625rem;
+}
+
+.artist {
+    font-size: .75rem;
+}
+
+.removeButton {
+    position: absolute;
+    
+    right: 1rem;
+    top: 1rem;
+    
+    width: 2.25rem;
+    height: 2.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

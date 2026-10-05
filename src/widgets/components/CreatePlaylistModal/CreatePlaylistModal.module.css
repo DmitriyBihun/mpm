@@ -1,0 +1,192 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-bg-overlay);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1100;
+    /* Вище ніж у AddToPlaylistModal */
+    animation: fadeIn 0.2s ease;
+}
+
+.modal {
+    background-color: var(--color-white);
+    width: 90%;
+    max-width: 30rem;
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid var(--color-grey);
+}
+
+.title {
+    color: var(--color-black);
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.closeButton {
+    width: 2.25rem;
+    height: 2.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trackInfo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid var(--color-grey);
+}
+
+.trackCover {
+    width: 3.75rem;
+    height: 3.75rem;
+    border: 1px solid var(--color-grey);
+}
+
+.trackDetails {
+    flex: 1;
+    color: var(--color-black);
+}
+
+.trackTitle {
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+
+.trackArtist {
+    font-size: 0.875rem;
+}
+
+.form {
+    padding: 1rem;
+}
+
+.formGroup {
+    margin-bottom: 1rem;
+}
+
+.label {
+    display: block;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    color: var(--color-black);
+}
+
+.submitError {
+    margin: .75rem 0;
+    padding: .5rem;
+    background-color: var(--color-bg-black);
+    border: 1px solid var(--color-red);
+    color: var(--color-red);
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.createButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.publicToggle {
+    margin-bottom: 1rem;
+    color: var(--color-black);
+    transition: all 0.3s ease;
+}
+
+.toggleLabel {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    cursor: pointer;
+    position: relative;
+
+    margin-bottom: .75rem;
+}
+
+.toggleInput {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+.toggleSlider {
+    position: relative;
+    display: inline-block;
+    width: 2.5rem;
+    height: 1.25rem;
+    background-color: var(--color-grey);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.toggleSlider::before {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    left: 2px;
+    top: 2px;
+    background-color: var(--color-white);
+    transition: 0.3s ease;
+}
+
+.toggleInput:checked+.toggleSlider {
+    background-color: var(--color-primary);
+}
+
+.toggleInput:checked+.toggleSlider::before {
+    transform: translateX(1.25rem);
+}
+
+.toggleText,
+.toggleHint {
+    font-size: .875rem;
+}
+
+@media (max-width: 30em) {
+    .actions {
+        gap: .5rem;
+    }
+}

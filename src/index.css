@@ -1,0 +1,92 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: none;
+
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+html,
+body {
+  font-size: 1rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+button,
+select,
+option {
+  cursor: pointer;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  appearance: none;
+}
+
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+/* ////////////////////////////////////////////////// */
+
+:root {
+  --color-primary: #8a05ff;
+  --color-soft-primary: #d1b8ff;
+  --color-white: #f5f5f5;
+  --color-black: #000000;
+  --color-bg-black: rgba(7, 7, 7, .6);
+  --color-bg-overlay: rgba(0, 0, 0, 0.5);
+  --color-bg: #070707;
+  --color-grey: #6b6b6b;
+  --color-soft-grey: #cccccc;
+  --color-lite-grey: #313131;
+  --color-red: #dc3545;
+}

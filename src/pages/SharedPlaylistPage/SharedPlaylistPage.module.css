@@ -1,0 +1,81 @@
+.container {
+    padding: 4.5rem 1rem 2.5rem 1rem;
+    max-width: 81.25rem;
+    margin: 0 auto;
+}
+
+.header {
+    margin-bottom: 2rem;
+}
+
+.publicBadge {
+    display: inline-block;
+    background: var(--color-black);
+    color: var(--color-white);
+    padding: .25rem .75rem;
+    font-size: .875rem;
+    margin-bottom: .75rem;
+}
+
+.playlistName {
+    font-size: 2rem;
+    color: var(--color-black);
+    margin-bottom: 1rem;
+}
+
+.tracksCount {
+    color: var(--color-black);
+    font-size: 1rem;
+}
+
+.tracksList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(270px, 100%), 1fr));
+    gap: .625rem;
+    margin-bottom: 2rem;
+}
+
+.emptyState {
+    text-align: center;
+    padding: 3.75rem 1.25rem;
+    color: var(--color-black);
+    font-size: 1.125rem;
+}
+
+.footer {
+    text-align: center;
+    color: var(--color-black);
+    padding-block: 2rem;
+}
+
+.footer p {
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+}
+
+.footer span {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.errorContainer {
+    text-align: center;
+    padding-block: 70px;
+    padding-inline: 1rem;
+    color: var(--color-black);
+}
+
+.error {
+    color: var(--color-red);
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 47.9988em) {
+    .header {
+        margin-bottom: 1.5rem;
+    }
+    .playlistName {
+        font-size: 1.5rem;
+    }
+}
